@@ -1,7 +1,7 @@
 ---
 # tasks file for apigee-opdk-temporary-restore-targets/
 - block:
-  - name: Move to original location- name: Move to temporary holding folder
+  - name: Move to original location
     shell: "mv {{ items.temporary_holding_folder }}/{{ items.file_name }} {{ items.original_folder }}/"
     with_items: "{{ temporary_move }}"
 
